@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,28 @@
         // 使得html的字体大小能随页面宽度而变化,进而使得所有的页面元素整体缩放
         window.onresize = resizePage();
         resizePage();
-        function resizePage () {
+
+        function resizePage() {
             var htmlObject = document.documentElement;
             var current = htmlObject.clientWidth;
             // 设计稿的宽度一般为750px,为了方便计算设计html的字体大小为100px,
             htmlObject.style.fontSize = current / 750 * 100 + "px";
-            
+
         }
-    
-    
     </script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header class="header">
+            <figure class="userInfo">
+                <img src="images/user.png" alt="">
+                <!-- 可以用文字排版工具T查看文字大小 -->
+                <figcaption>112345(审核中)</figcaption>
+                <figcaption>IT石榴工程师编号</figcaption>
+            </figure>
+        </header>
+    </div>
 </body>
+
 </html>

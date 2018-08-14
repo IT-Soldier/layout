@@ -4,3 +4,48 @@ html {
 body {
   font-size: 0.14rem;
 }
+body,
+figure {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 7.5rem;
+  margin: 0 auto;
+}
+.container .header {
+  position: relative;
+  width: 7.5rem;
+  height: 4.56rem;
+  /*使用了png-24图片,因为有透明背景,普通图片使用jpeg即可*/
+  background: url('../images/bg.png') no-repeat;
+  /*简写的写法
+        background: url('@{imgUrl}bg.png') no-repeat center/7.5rem 4.56rem;
+        */
+  /*background简写的部分是包含size的,防止被覆盖才有写一遍*/
+  background-size: 7.5rem 4.56rem;
+}
+.container .header .userInfo {
+  position: absolute;
+  top: 0.24rem;
+  left: 30px;
+  width: 300px;
+  height: 60px;
+}
+.container .header .userInfo img {
+  width: 60px;
+}
+.container .header .userInfo figcaption {
+  position: absolute;
+  color: #FFF;
+}
+.container .header .userInfo figcaption:nth-child(2) {
+  top: 0.1rem;
+  left: 1rem;
+  font-size: 0.28rem;
+}
+.container .header .userInfo figcaption:nth-child(3) {
+  font-size: 0.2rem;
+  top: 0.45rem;
+  left: 0.9rem;
+}
